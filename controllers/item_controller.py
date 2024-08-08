@@ -40,3 +40,10 @@ class ItemController:
         if item is None:
             return jsonify({'message': 'Item not found'}), 404
         result = item_schema.dump(item)
+
+    @staticmethod
+    def delete_item(item_id):
+        item = ItemService.update_item(item_id)
+        if item is None:
+            return jsonify({'message': 'Item not found'}), 404
+        result = item_schema.dump(item)

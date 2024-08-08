@@ -1,0 +1,1 @@
+from marshmallow_sqlalchemy import SQLAlchemyAutoSchema, auto_field

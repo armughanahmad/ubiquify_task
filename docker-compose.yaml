@@ -1,0 +1,9 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: python wsgi.py
+    ports:
+      - 5555:5000
+    restart: always
